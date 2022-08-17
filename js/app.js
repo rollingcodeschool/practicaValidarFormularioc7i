@@ -32,21 +32,21 @@ class Persona {
           "Paz y explosión demográfica",
           "Ambicion 🤑"
         );
-      } else if (this.anioNacimiento >= 1969 && this.anioNacimiento < 1980) {
+      } else if (this.anioNacimiento >= 1969 && this.anioNacimiento <= 1980) {
         return this.mostrarDetalleGeneracion(
           "Generación X",
           "1969 - 1980",
           "Crisis del 73 y transición española",
           "Obsesión por el exito 😎"
         );
-      } else if (this.anioNacimiento >= 1981 && this.anioNacimiento < 1993) {
+      } else if (this.anioNacimiento >= 1981 && this.anioNacimiento <= 1993) {
         return this.mostrarDetalleGeneracion(
           "Generación Y (Millenials)",
           "1981 - 1993",
           "Inicio de la digitalización",
           "Frustración 😕"
         );
-      } else if (this.anioNacimiento >= 1994 && this.anioNacimiento < 2010) {
+      } else if (this.anioNacimiento >= 1994 && this.anioNacimiento <= 2010) {
         return this.mostrarDetalleGeneracion(
           "Generación Z (Centennials)",
           "1994 - 2010",
