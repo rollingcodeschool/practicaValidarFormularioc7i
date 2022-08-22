@@ -9,7 +9,7 @@ let peso = document.getElementById("peso");
 let altura = document.getElementById("altura");
 let anio = document.getElementById("fechaNacimiento");
 let formulario = document.getElementById("formGeneraciones");
-let alert = document.querySelector("#msjError");
+let alerta = document.querySelector("#msjError");
 let btnmostrarDatos = document.querySelector("#mostrarDatos");
 let btnmostrarGeneracion = document.querySelector("#mostrarGeneracion");
 
@@ -22,6 +22,9 @@ dni.addEventListener('blur', ()=>{ validarDNI(dni)});
 function crearPersona(e) {
   e.preventDefault();
 
+  //volver a validar todos los campos
+  if(cantidadCaracteres(nombre) === true && validarNumeros(edad) && validarDNI(dni)){
+    //cuando los datos fueron validos
     console.log("tengo que crear la persona");
     //hay que ocultar el alert
    
@@ -50,6 +53,9 @@ function crearPersona(e) {
       let panelDatos = document.querySelector("#detalle");
       panelDatos.innerHTML = nuevaPersona.mostrarGeneracion();
     });
+  }else{
+    alert('Debe completar todos los datos')
+  }
   
 }
 
